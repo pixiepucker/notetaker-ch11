@@ -12,8 +12,20 @@ const { db } = require('./db/db.json');
 app.use(express.urlencoded({ extended: true }));
 //parse incoming JSON data
 app.use(express.json());
+//make request to public
+app.use(express.static('public'));
 
 //write get routes here
+
+//get main page
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
+//get notes page
+app.get('/notes', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+});
 
 //get notes
 app.get('/api/notes', (req,res) => {
