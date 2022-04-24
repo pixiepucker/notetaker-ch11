@@ -1,0 +1,24 @@
+{
+  "name": "note-taker",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jest": "^27.5.1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pixiepucker/notetaker-ch11.git"
+  },
+  "keywords": [],
+  "bugs": {
+    "url": "https://github.com/pixiepucker/notetaker-ch11/issues"
+  },
+  "homepage": "https://github.com/pixiepucker/notetaker-ch11#readme"
+}
