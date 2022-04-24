@@ -19,8 +19,7 @@ app.use(express.static('public'));
 
 //get notes
 app.get('/api/notes', (req,res) => {
-    let results = db;
-    res.json(results);
+    res.sendFile(path.join(__dirname, './db/db.json'));
 });
 
 //use post to create new note
