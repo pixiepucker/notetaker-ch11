@@ -17,16 +17,6 @@ app.use(express.static('public'));
 
 //write get routes here
 
-//get main page
-app.get('*', (req,res) => {
-    res.sendFile(path.join(__dirname, './public/index.html'));
-});
-
-//get notes page
-app.get('/notes', (req,res) => {
-    res.sendFile(path.join(__dirname, './public/notes.html'));
-});
-
 //get notes
 app.get('/api/notes', (req,res) => {
     let results = db;
@@ -49,6 +39,16 @@ app.post('/api/notes', (req,res) => {
     );
     //send back response
     res.json(notesData);
+});
+
+//get notes page
+app.get('/notes', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/notes.html'));
+});
+
+//get main page
+app.get('*', (req,res) => {
+    res.sendFile(path.join(__dirname, './public/index.html'));
 });
 
 //server listen
